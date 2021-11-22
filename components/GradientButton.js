@@ -10,13 +10,13 @@ import Svg, {
   Rect,
 } from "react-native-svg";
 
-export default function GradientButton({ name, checkedIndex, index }) {
+export default function GradientButton({ title, checkedIndex, index }) {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Svg height="60" width="103">
         <Defs>
           <LinearGradient
-            id="rainbow"
+            id="grad"
             x1="0"
             x2="100%"
             y1="0"
@@ -37,10 +37,10 @@ export default function GradientButton({ name, checkedIndex, index }) {
           alignmentBaseline="center"
           textAnchor="middle"
           fontSize={16}
-          fill="url(#rainbow)"
+          fill="url(#grad)"
         >
           <TSpan x="50" y="25">
-            {name}
+            {title}
           </TSpan>
         </Text>
         <Rect
@@ -50,7 +50,7 @@ export default function GradientButton({ name, checkedIndex, index }) {
           ry="12"
           strokeWidth={2}
           fill="none"
-          stroke="url(#rainbow)"
+          stroke="url(#grad)"
           width="97%"
           height="97%"
         ></Rect>

@@ -1,13 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import Svg, {
-  LinearGradient,
-  Text,
-  Defs,
-  Stop,
-  TSpan,
-  Rect,
-} from "react-native-svg";
+import Svg, { LinearGradient, Text, Defs, Stop, TSpan } from "react-native-svg";
 
 const GradientText = ({ title }) => {
   return (
@@ -15,14 +8,14 @@ const GradientText = ({ title }) => {
       <Svg height="60" width="90">
         <Defs>
           <LinearGradient
-            id="rainbow"
+            id="grad"
             x1="0"
             x2="100%"
             y1="0"
             y2="0"
             gradientUnits="userSpaceOnUse"
           >
-            <Stop stopColor={"#EF7C6E"} offset="0%" />
+            <Stop stopColor={"#EF7C6E"} offset="20%" />
             <Stop stopColor={"#F5B984"} offset="100%" />
           </LinearGradient>
         </Defs>
@@ -30,7 +23,7 @@ const GradientText = ({ title }) => {
           alignmentBaseline="center"
           textAnchor="middle"
           fontSize={16}
-          fill="url(#rainbow)"
+          fill="url(#grad)"
         >
           <TSpan x="50" y="25">
             {title}
